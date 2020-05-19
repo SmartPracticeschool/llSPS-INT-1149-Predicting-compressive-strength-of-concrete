@@ -1,0 +1,112 @@
+<html>
+<head>
+<title>Predict compressive strength</title>
+
+<meta charset="UTF-8">
+ 
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+  
+
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/mystyle.css') }}">
+
+
+
+</head>
+
+<body>
+<section id="nav-bar">
+<nav class="navbar navbar-expand-lg navbar-light">
+
+
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <i class="fa fa-bars"></i>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#top">HOME</a>
+      </li>
+	  
+      <li class="nav-item">
+        <a class="nav-link" href="#services">PREDICT</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+</section>
+
+<!-------------banner section----------->
+
+<section id="banner">
+<div class="container">
+	<div class="row">
+		<div class="col-md-10">
+			<center><p class="promo-title">Predict the compressive strength of concrete</p></center>
+		</div>
+		
+	</div>
+</div> 
+</section>
+
+<!---- predict section --->
+<section id="services">
+<div class="container text-center">
+<h1 class="title"><b>PREDICT</b></h1><br>
+	<div class="row">
+						<div>
+							<img src="data:image/jpeg;base64,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" style="height:450px;width:510px"class="img-rounded" alt="Gesture" align="right">       
+						</div>&nbsp &nbsp  &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+		<div class="login">
+			<!-- Main Input For Receiving Query to our ML -->
+			<form action="{{ url_for('predict')}}"method="post">
+				<input type="text" name="cement" placeholder="Cement" required="required" /><br>
+				<input type="text" name="furnace_slag" placeholder="furnace_slag" required="required" /><br>
+				<input type="text" name="fly_ash" placeholder="fly_ash" required="required" /><br>
+				<input type="text" name="water" placeholder="water" required="required" />
+				<input type="text" name="super_plasticizer" placeholder="super_plasticizer" required="required" /><br>
+				<input type="text" name="coarse_agg" placeholder="Aggregate" required="required" /><br>
+				<input type="text" name="fine_agg" placeholder="sand" required="required" /><br>
+				<input type="text" name="age" placeholder="age(in days)" required="required" /><br>
+				
+
+				<button type="submit" class="btn btn-primary btn-block btn-small">Predict Strength</button>
+			
+			</form>
+		</div>
+		
+
+		<div>
+			<div>
+				<br><br><br><h3><b>
+					{{ prediction_text }}
+				</b></h3>
+			</div>
+		</div>
+		
+	</div>
+</div>
+</section>
+
+<!-----smooth-scroll------>
+
+    <script src="{{ url_for('static', filename='js/smooth-scroll.js') }}" type="text/javascript"></script>    
+
+<script>
+	var scroll = new SmoothScroll('a[href*="#"]');
+</script>
+</body>
+
+</html>
